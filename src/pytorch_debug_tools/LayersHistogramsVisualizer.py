@@ -20,10 +20,19 @@ class Resolution:
 
         return Resolution(height=height, width=width)
 
-class SingleLayerVisualiser:
-    def visualise(self, weight: np.ndarray, resolution: Resolution) -> np.ndarray:
+
+class SingleLayerVisualizer:
+    def visualize(self, weight: np.ndarray, resolution: Resolution) -> np.ndarray:
         pass
 
 
 class LayersHistogramsVisualizer:
-    pass
+    def __init__(self, nn_model: torch.nn.Module, num_workers: int = 1):
+        self.nn_model = nn_model
+        self.num_workers = num_workers
+
+    def create_histograms(self) -> Dict[str, np.ndarray]:
+        pass
+
+    def create_and_dump_histograms(self, out_dir: str):
+        pass
