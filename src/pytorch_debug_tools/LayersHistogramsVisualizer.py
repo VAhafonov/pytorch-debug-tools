@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Tuple
 
 import cv2
 import numpy as np
@@ -23,6 +23,11 @@ class Resolution:
         width = int(resolution_string[separator_idx + 1:])
 
         return Resolution(height=height, width=width)
+
+    @classmethod
+    def from_tuple(cls, resolution_tuple: Tuple[int, int]):  # return Resolution
+        assert len(resolution_tuple) == 2
+        return Resolution(height=resolution_tuple[0], width=resolution_tuple[1])
 
 
 class SingleLayerVisualizer:
