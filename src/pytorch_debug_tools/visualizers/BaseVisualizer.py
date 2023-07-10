@@ -10,5 +10,5 @@ class BaseVisualizer(abc.ABC):
         self.resolution = resolution
 
     @abc.abstractmethod
-    def visualize(self, weight: np.ndarray, name: str, resolution: Resolution, num_bins: int) -> np.ndarray:
+    def visualize(self, weight: np.ndarray, name: str, num_bins: int) -> np.ndarray:
         raise NotImplementedError
