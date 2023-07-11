@@ -29,7 +29,7 @@ class MatplotlibVisualizer(BaseVisualizer):
         fig = plt.figure()
         ax = fig.add_subplot(111)
 
-        ax.hist(weight, num_bins)
+        ax.hist(weight, num_bins, color='#069AFA')
         ax.set_xlabel('Weight value')
         ax.set_ylabel('Quantity')
         ax.set_title(name)
