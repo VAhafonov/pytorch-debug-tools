@@ -14,7 +14,6 @@ class MatplotlibVisualizer(BaseVisualizer):
         super().__init__(resolution)
         self.resolution = resolution
 
-    @abc.abstractmethod
     def visualize(self, weight: np.ndarray, name: str, num_bins: int) -> np.ndarray:
         figure = self.__create_histogram_figure(weight, name, num_bins)
         np_image = self.__plt_figure_to_np_array(figure)
